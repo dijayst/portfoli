@@ -1,0 +1,446 @@
+
+.App {
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.introtext {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+p {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 0px;
+
+
+}
+
+.btn {
+  border-color: #FFFFFF;
+  padding: 14px 18px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 5px;
+  width: 150px;
+  height: 47px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  
+}
+.animated-text {
+  
+  position: relative;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateY(100%); /* Start off-screen at the bottom */
+  transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth animation */
+}
+
+.animated-text.visible {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+.hover-button {
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+background-color: #000000;
+cursor: pointer;
+overflow: hidden;
+transition: color 0.3s ease-in-out;
+border-bottom-width: 1px;
+border-top-width: 1px;
+border-color: #FFFFFF;
+padding: 14px 18px;
+color: #FFFFFF;
+font-size: 12px;
+font-weight: 800;
+cursor: pointer;
+letter-spacing: 5px;
+width: 150px;
+height: 47px;
+border-style: ridge;
+}
+
+.hover-button::before {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 0;
+color: red;
+background-color: #FFFFFF;
+z-index: 0;
+transition: height 0.3s ease-in-out;
+}
+
+.hover-button:hover::before {
+height: 100%;
+color: #45a049;
+}
+
+.hover-button:hover {
+color: blue;
+z-index: 1; /* Ensures text stays above the background */
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+utton {
+  background-color:transparent;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+utton:hover {
+  color: #45a049;
+}
+
+
+.div{
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+effect-3{
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #6045a0;
+  margin-left: 500px;
+  margin-top: -450px;
+  content: "";
+}
+effect-3:hover{
+  background-color: red;
+  width: 300px;
+  height:200px;
+  margin-left: 250px;
+  margin-bottom: -100px;
+}
+.cursor-effect {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+  backdrop-filter: invert(1);
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: yellow;
+}
+.effect-1 {
+  position: absolute;
+  animation: spin 10s linear infinite;
+  width: 20px;
+  height: 20px;
+  top: 530px;
+  right: 150px;
+   border-width: 3px;
+  border-style: solid; /* Add this line */
+  border-color: #8a49ff;
+}
+
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.effect-2 {
+  left: 3%;
+  bottom: 20%;
+  width: 40px;
+  display: flex;
+  background-color: rgb(230, 20, 20);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: topBounce 3s ease-in-out infinite;
+}
+@keyframes topBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+.effect-4 {
+  position: absolute; /* Ensure the element is positioned for animation */
+  left: 30%;
+  top: 10%;
+  background-color: #1bb42352;
+  border-top: 25px solid rgba(0, 0, 0, 0);
+  border-left: 25px solid var(--green-alt);
+  animation: spin 15s linear infinite; /* Standard CSS animation properties */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.effect-3 {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #06d79c;
+  cursor: pointer;
+
+}
+
+effect-3:hover {
+  background: linear-gradient(to right, #06d79c, #0a1d1b);
+  width: 300px;
+  height: 250px;
+  top: 20px;
+  right: 25px;
+  border-radius: 10px;
+  z-index: 100; 
+  color: #FFFFFF;
+}
+
+.hover-box {
+  position: absolute;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 1;
+  background: linear-gradient(to right, #06d79c, #0a1d1b);
+  width: 300px;
+  height: 250px;
+  top: 20px;
+  right: -110px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  padding: 10px; /* Add padding for better spacing */
+  white-space: normal; /* Allow text to wrap to the next line */
+
+  
+}
+
+.hover-box p {
+  margin: 10px;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
+  word-wrap: break-word; 
+}
+
+.container:hover .hover-box {
+  display: flex;
+}
+
+.triangle {   position: absolute; /* Ensure the triangle is positioned relative to its parent */
+  top: 60px; /* Adjust the vertical positioning */
+  left: 450px; /* Move it to the center horizontally */
+  transform: translateX(-50%); /* Center it horizontally */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid #007bff;
+  z-index: 2;
+  
+  position: absolute;
+  animation: spin 10s linear infinite;
+
+}
+.triangle2 {  position: absolute; /* Ensure the element can be positioned relative to the nearest positioned ancestor */
+  top: 56px; /* Position it at the top */
+  left: 450px; /* Position it at the left */
+  width: 0;
+  height: 0;
+  transform: translateX(-50%); /* Center it horizontally */
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid  #1f5759;
+  
+  position: absolute;
+  animation: spin 10s linear infinite;
+
+}
+.square{
+position: absolute;
+width: 20px;
+height: 20px;
+top: 530px;
+right: 150px;
+ border-width: 3px;
+border-style: solid; /* Add this line */
+border-color:  #06d79c;
+}
+.square2{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  top: 50px;
+  left:30px;
+   border-width: 2px;
+  border-style: solid; /* Add this line */
+  border-color:  #06d79c;
+  }
+  .dot {
+    position: fixed; /* Ensures the element is positioned relative to the viewport */
+    left: 30px;         /* Aligns the element to the left */
+    bottom: 0;       /* Aligns the element to the bottom */
+    width: 40px;
+    height: 40px;    /* Added height for consistency */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    animation: topBounce 3s ease-in-out infinite;
+   
+}
+
+.dot > div {
+  width: 3px;       /* Set a width for the child dots */
+  height: 3px;      /* Set a height for the child dots */
+  background-color:#fb839e; /* Background color for visibility */
+  margin: 3px;       /* Add some spacing between the dots */
+  border-radius: 50%; /* Make the dots circular */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #000000;
+  color: black;
+  min-height: 100vh;
+    max-width: 100%;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Dark mode button */
+.dark-mode-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-button:hover {
+  background-color: currentColor;
+  color: white;
+}
+section{
+  
+    width: 100%;
+    height: 100vh;
+    background-color: #0b0b0f;
+    position: relative;
+    min-height: 100vh;
+
+
+}
+
