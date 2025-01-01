@@ -1,3 +1,6 @@
+
+
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--white);
   font-weight: 600;
@@ -515,8 +518,7 @@ header {
 }
 .about {
   margin-top: 13rem;
-  padding: 2rem 6rem;
-  position: relative;
+  padding: 2rem 6rem ;
 }
 .services {
   margin-top: 6rem;
@@ -533,15 +535,10 @@ header {
   background-color: #000000;
   padding-top: 4rem;
 }
-.red{
-  background-color: red;
-  color: #007bff;
-}
 
-.container7{
-  display: flex;
-  flex-direction: row;
-  
+.container{
+  display:block;
+
   align-items: center;
   justify-content: center;
 }
@@ -551,12 +548,33 @@ header {
   margin-right: 2.5rem;
   z-index: 100;
   position: relative;
+  
 }
-
+.profile-img img {
+  width: 510px;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: .3s;
+}
 .about-content {
-  flex: 1;
+ margin-top: -700px;
   font-size: 1rem;
   line-height: 2;
+  margin-right: 2.5rem;
+}
+.about-heading {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0;
+  margin-bottom: 3rem;
+}
+.about-content p {
+  margin-top: 5rem;
+  font-weight: 300;
+  text-align: left;
+  color: #960909;
 }
 img {
   width: 350px;

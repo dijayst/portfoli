@@ -84,11 +84,21 @@ export default function Landingpage() {
 
 </div>
 
-
-    
-<label class="toggle" for="switch" onClick={toggleDarkMode}>
-{darkMode}
-</label>
+<div className={darkMode ? 'dark-mode' : 'light-mode'}>
+      <label className="toggle">
+        <input 
+          type="checkbox" 
+          id="switch" 
+          onClick={toggleDarkMode} 
+        />
+        <span>{darkMode ? 'Dark Mode' : 'Light Mode'}</span>
+      </label>
+      <h1>{darkMode ? 'Dark Mode is On' : 'Light Mode is On'}</h1>
+      
+    </div>
+<label className="toggle" for="switch" onClick={toggleDarkMode}>
+      {darkMode ? "Dark Mode" : "Light Mode"}
+    </label>
 <div class="landing-text">
   <h1 >Israel Mitolu</h1>
   <p>My approach to frontend engineering and technical writing is
@@ -98,6 +108,7 @@ export default function Landingpage() {
 </div>
    
     </header>
+
     <main>
     <section className="about">
 <div className="container">
@@ -105,8 +116,8 @@ export default function Landingpage() {
     <img src={ster} alt="logo"/>
   </div>
   <div  className="about-content">
-    <div><h2>About Me</h2></div>
-    <p className="red">
+    <div className="about-heading"><h2>About Me</h2></div>
+    <p >
     Hello there, I'm Israel Mitolu - a frontend engineer and technical writer with a passion for creating digital experiences that are both beautiful and accessible. My mission is to build websites and applications that delight users, while also making them easy to use and navigate for everyone.<br/>
     <br/>
 
@@ -139,7 +150,7 @@ I'm also a passionate writer, with a blog and articles on various platforms, whe
 <section id="projects" class="project">
 <h5>— check out some </h5>
 <h2>Stuff I’ve worked on 💻</h2>
-<button style={{ backgroundImage: `linear-gradient(to right, rgba(0, 224, 255, 1), rgba(0, 133, 255, 1))`, }} >dsgfdhhgfj</button>
+
 <div class="project-item-container">
   <div class="project-box">
     <a></a>
